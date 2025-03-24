@@ -1,10 +1,24 @@
-import Sample from './components/sample';
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router';
 
-/**
- * This is the entry point of the App, feel free to
- * modify this file as you want!
- *
- */
-const App = () => <Sample />;
+import { Layout } from './components';
+
+const routes = [
+    {
+      path: '/',
+      element: <Layout />,
+      children: [
+        {
+          index: true,
+          element: <Navigate to="/characters" />,
+        },
+        {
+          path: '/characters',
+          element: <Home />,
+        },
+      ],
+    },
+  ];
+
+const App = () => <RouterProvider router={createBrowserRouter(routes)} />;
 
 export default App;
