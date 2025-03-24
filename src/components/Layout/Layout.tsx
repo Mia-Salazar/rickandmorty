@@ -3,7 +3,9 @@ import { Outlet } from "react-router";
 const Layout = () => (
     <>
       <header></header>
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
     </>
 );
 
