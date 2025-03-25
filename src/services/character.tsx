@@ -1,20 +1,23 @@
-import { Character } from "../models/Character";
+import { CharacterListModel } from "../models/Character";
 
 const LIMIT = 10
 
-export const fetchCharacters = async (): Promise<Character[]> => {
+export const fetchCharacters = async (): Promise<CharacterListModel> => {
   try {
-    const response = await fetch(
-      `https://dragonball-api.com/api/characters?count=${LIMIT}`
-    );
+    const response = await fetch(`https://rickandmortyapi.com/api/character?count=${LIMIT}`);
     if (!response.ok) throw new Error('Error al obtener los datos');
 
-    const data: { items: Character[] } = await response.json();
-    return data.items;
+    const data: CharacterListModel = await response.json();
+    return data
   } catch (error) {
-    if (error instanceof Error) {
-      throw new Error(error.message);
-    }
-    throw new Error('Error desconocido');
+    console.error("Error al obtener los personajes:", error);
+    return {
+      results: [],
+      info: {
+        count: 0,
+        pages: 0,
+      }
+    };
   }
 };
+

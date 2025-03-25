@@ -1,8 +1,28 @@
-export interface Character {
-    id: number;
-    name: string;
-    race: string;
-    gender: string;
-    image: string;
-    description?: string;
+interface InfoModel {
+    count: number;
+    pages: number;
 }
+
+interface OriginModel {
+    name: string;
+}
+
+interface LocationModel {
+    name: string;
+}
+
+export interface CharacterModel {
+    id: number;
+    image: string;
+    location: LocationModel;
+    name: string;
+    origin: OriginModel;
+    species: string;
+    status: string;
+}
+  
+export interface CharacterListModel {
+    info: InfoModel;
+    results: CharacterModel[];
+}
+  
