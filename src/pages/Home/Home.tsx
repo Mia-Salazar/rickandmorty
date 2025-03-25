@@ -1,12 +1,12 @@
-import { Card } from "../../components";
-import { CharacterModel } from "../../models/Character"
+import { Card, Spinner } from "../../components";
 import { useSearchCharacterQuery } from "../../services/characterHook";
-import { ContainerStyled } from "./Home.styled";
+
+import { ContainerStyled, SpinnerWrapperStyled } from "./Home.styled";
 
 const Home = () => {
     const { data, isLoading } = useSearchCharacterQuery();
 
-    console.log(data?.results, 'bla')
+    if (isLoading) return <SpinnerWrapperStyled><Spinner /></SpinnerWrapperStyled>
 
     return(
         <section>

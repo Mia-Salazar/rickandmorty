@@ -1,6 +1,6 @@
 import { CharacterListModel } from "../models/Character";
 
-const LIMIT = 10
+const LIMIT = 20
 
 export const fetchCharacters = async (): Promise<CharacterListModel> => {
   try {

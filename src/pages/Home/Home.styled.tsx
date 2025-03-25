@@ -15,3 +15,9 @@ export const ContainerStyled = styled.ul`
         grid-template-columns: 1fr 1fr 1fr;
     }
 `
+
+export const SpinnerWrapperStyled = styled.div`
+    display: flex;
+    justify-content: center;
+    padding: 36px;
+`
