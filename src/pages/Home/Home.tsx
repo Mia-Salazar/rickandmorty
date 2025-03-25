@@ -5,16 +5,25 @@ import { useSearchCharacterQuery } from "../../services/characterHook";
 const Home = () => {
     const { data, isLoading } = useSearchCharacterQuery();
 
-    //console.log(data, 'bla')
+    console.log(data?.results, 'bla')
 
     return(
         <section>
             <ul>
-                {data?.results?.map((character: CharacterModel) => <Card />)}
+                {(data?.results ?? []).map(({ id, name, image, location, species, origin, status }) => (
+                    <Card
+                        key={id}
+                        name={name}
+                        image={image}
+                        location={location.name}
+                        species={species}
+                        origin={origin.name}
+                        status={status}
+                    />
+                ))}
             </ul>
         </section>
     );
 }
-    
 
 export default Home;
