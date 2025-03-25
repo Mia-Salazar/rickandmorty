@@ -10,9 +10,13 @@ export const ContainerStyled = styled.li`
 export const ImageWrapperStyled = styled.figure`
   margin: 0;
   padding: 16px;
-  width: 100%;
+  max-width: 100%;
 
   @media (min-width: 768px) {
+    width: 150px;
+  }
+
+  @media (min-width: 1100px) {
     width: 200px;
   }
 `
@@ -30,6 +34,6 @@ export const InfoContainerStyled = styled.div`
 export const NameStyled = styled.h3`
   margin: 0;
   color: #2DAA9E;
-  font-size: 26px;
+  font-size: 36px;
   font-family: "Jolly Lodger", system-ui;
 `

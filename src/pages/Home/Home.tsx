@@ -1,6 +1,7 @@
 import { Card } from "../../components";
 import { CharacterModel } from "../../models/Character"
 import { useSearchCharacterQuery } from "../../services/characterHook";
+import { ContainerStyled } from "./Home.styled";
 
 const Home = () => {
     const { data, isLoading } = useSearchCharacterQuery();
@@ -9,7 +10,7 @@ const Home = () => {
 
     return(
         <section>
-            <ul>
+            <ContainerStyled>
                 {(data?.results ?? []).map(({ id, name, image, location, species, origin, status }) => (
                     <Card
                         key={id}
@@ -21,7 +22,7 @@ const Home = () => {
                         status={status}
                     />
                 ))}
-            </ul>
+            </ContainerStyled>
         </section>
     );
 }
