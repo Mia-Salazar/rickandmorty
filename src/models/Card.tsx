@@ -4,6 +4,6 @@ export interface CardModel {
     name: string;
     origin: string;
     species: string;
-    status: string;
+    status: "Alive" | "Dead" | "unknown";
     key: number;
 }

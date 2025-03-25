@@ -18,7 +18,7 @@ export interface CharacterModel {
     name: string;
     origin: OriginModel;
     species: string;
-    status: string;
+    status: "Alive" | "Dead" | "unknown";
 }
   
 export interface CharacterListModel {
