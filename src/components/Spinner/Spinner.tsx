@@ -1,7 +1,7 @@
 import { SpinnerStyled } from "./Spinner.styled";
 
 const Spinner = () => (
-    <SpinnerStyled aria-label="Cargando" />
+    <SpinnerStyled aria-label="Loading" />
 );
 
 export default Spinner;

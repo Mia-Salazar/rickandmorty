@@ -1,5 +1,5 @@
 export const STATUS = {
-  "Alive": "Vivo", 
-  "Dead": "Muerto",
-  "unknown": "Desconocido"
+  "Alive": "Alive", 
+  "Dead": "Dead",
+  "unknown": "Unknown"
 }
