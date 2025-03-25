@@ -1,9 +1,9 @@
-import { HeaderStyled, LinkStyled, TitleStyled } from "./Header.styled";
+import { HeaderStyled, LinkStyled, SmallStyled, TitleStyled } from "./Header.styled";
 
 const Header = () => (
     <HeaderStyled>
         <LinkStyled to={`/`} aria-label="Ir al inicio">
-            <TitleStyled>Rick and Morty</TitleStyled>
+            <TitleStyled>Rick <SmallStyled>and</SmallStyled> Morty</TitleStyled>
         </LinkStyled>
     </HeaderStyled>
 );

@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const TitleStyled = styled.h1`
     margin: 0;
     color: #fff;
-    font-family: "Creepster", system-ui;
+    font-family: "Jolly Lodger", system-ui;
 `
 
 export const HeaderStyled = styled.header`
@@ -14,4 +14,8 @@ export const HeaderStyled = styled.header`
 
 export const LinkStyled = styled(Link)`
     text-decoration: none;
+`
+
+export const SmallStyled = styled.span`
+    font-size: 22px;
 `
