@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const TitleStyled = styled.h1`
     margin: 0;
     color: #fff;
+    font-size: 42px;
     font-family: "Jolly Lodger", system-ui;
 `
 
