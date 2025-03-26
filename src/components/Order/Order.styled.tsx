@@ -4,7 +4,7 @@ import { InputModel } from "../../models/Input";
 export const ContainerStyled = styled.fieldset`
   border: none;
   padding: 0;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 `
 
 export const TitleStyled = styled.legend`
@@ -18,9 +18,9 @@ export const TitleStyled = styled.legend`
 export const SwitchContainerStyled = styled.label`
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 24px;
   margin-bottom: 12px;
-  font-size: 22px;
+  font-size: 18px;
   user-select: none;
 `
 
@@ -28,8 +28,8 @@ export const CheckmarkStyled = styled.span`
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   background-color: #eee;
   border-radius: 4px;
 `
