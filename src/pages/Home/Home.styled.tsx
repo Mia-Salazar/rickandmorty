@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerStyled = styled.ul`
-    padding: 16px;
+    padding: 0;
     margin: 0;
   
     display: grid;
@@ -20,4 +20,10 @@ export const SpinnerWrapperStyled = styled.div`
     display: flex;
     justify-content: center;
     padding: 36px;
+`
+
+export const MainContainerStyled = styled.section`
+    max-width: 1200px;
+    margin: 32px auto;
+    padding: 0 16px;
 `

@@ -2,8 +2,6 @@
 import { CardModel } from "../../models/Card";
 import { ContainerStyled, ImageStyled, ImageWrapperStyled, InfoContainerStyled, NameStyled } from "./Card.styled";
 
-
-
 const Card: React.FC<CardModel> = ({ name, image, location, species, origin, status }) => (
     <ContainerStyled>
       <ImageWrapperStyled>

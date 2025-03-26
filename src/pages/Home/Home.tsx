@@ -1,7 +1,7 @@
-import { Card, Spinner } from "../../components";
+import { Card, Order, Spinner } from "../../components";
 import { useSearchCharacterQuery } from "../../services/characterHook";
 
-import { ContainerStyled, SpinnerWrapperStyled } from "./Home.styled";
+import { ContainerStyled, MainContainerStyled, SpinnerWrapperStyled } from "./Home.styled";
 
 const Home = () => {
     const { data, isLoading } = useSearchCharacterQuery();
@@ -9,7 +9,11 @@ const Home = () => {
     if (isLoading) return <SpinnerWrapperStyled><Spinner /></SpinnerWrapperStyled>
 
     return(
-        <section>
+        <MainContainerStyled>
+            <div>
+
+            </div>
+            <Order sortOrder="asc" />
             <ContainerStyled>
                 {(data?.results ?? []).map(({ id, name, image, location, species, origin, status }) => (
                     <Card
@@ -23,7 +27,7 @@ const Home = () => {
                     />
                 ))}
             </ContainerStyled>
-        </section>
+        </MainContainerStyled>
     );
 }
 
