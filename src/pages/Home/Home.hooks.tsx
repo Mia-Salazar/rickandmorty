@@ -1,7 +1,7 @@
 import { FormEvent, useEffect, useState } from "react"
 import { ChangeEvent } from "react";
 
-import { useSearchCharacterQuery } from "../../services/charactersHook";
+import { useSearchCharactersQuery } from "../../services/charactersHook";
 import { CharacterModel } from "../../models/Character";
 
 export const useCharacter = () => {
@@ -9,7 +9,7 @@ export const useCharacter = () => {
     const [sortOrder, setSortOrder] = useState< "asc" | "desc">("asc")
     const [characters, setCharacters] = useState<CharacterModel[]>([]);
 
-    const { data, isLoading } = useSearchCharacterQuery(name);
+    const { data, isLoading } = useSearchCharactersQuery(name);
 
     const sortCharactersByName = (characters: CharacterModel[], order: "asc" | "desc"): CharacterModel[] => {
         return [...characters].sort((a, b) => {

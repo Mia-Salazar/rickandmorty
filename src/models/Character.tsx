@@ -19,6 +19,9 @@ export interface CharacterModel {
     origin: OriginModel;
     species: string;
     status: "Alive" | "Dead" | "unknown";
+    gender?: "Female" | "Male" | "Genderless" | "unknown",
+    episode?: string[];
+    type?: string;
 }
   
 export interface CharacterListModel {
