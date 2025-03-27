@@ -1,10 +1,9 @@
 import { CharacterListModel } from "../models/Character";
 
-const LIMIT = 20
-
-export const fetchCharacters = async (): Promise<CharacterListModel> => {
+export const fetchCharacters = async (name?: string): Promise<CharacterListModel> => {
+  const url = name ? `https://rickandmortyapi.com/api/character?name=${name}` : 'https://rickandmortyapi.com/api/character';
   try {
-    const response = await fetch(`https://rickandmortyapi.com/api/character?count=${LIMIT}`);
+    const response = await fetch(url);
     if (!response.ok) throw new Error('Error al obtener los datos');
 
     const data: CharacterListModel = await response.json();
