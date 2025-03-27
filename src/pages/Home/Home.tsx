@@ -1,7 +1,7 @@
 import { Card, Filter, Order, Spinner } from "../../components";
 import { useCharacter } from "./Home.hooks";
 
-import { ContainerStyled, MainContainerStyled, SpinnerWrapperStyled, TitleContainerStyled, TitleStyled } from "./Home.styled";
+import { ContainerStyled, MainContainerStyled, TitleContainerStyled, TitleStyled } from "./Home.styled";
 
 const Home = () => {
     const { characters, handleChangeSort, handleSubmit, isLoading, sortOrder } = useCharacter();
@@ -14,9 +14,7 @@ const Home = () => {
             </TitleContainerStyled>
 
             {isLoading ? (
-                <SpinnerWrapperStyled>
-                    <Spinner />
-                </SpinnerWrapperStyled>
+                <Spinner />
             ):  (
                 <>
                     <Order sortOrder={sortOrder} onChange={handleChangeSort} />

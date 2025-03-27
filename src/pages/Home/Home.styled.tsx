@@ -16,12 +16,6 @@ export const ContainerStyled = styled.ul`
     }
 `
 
-export const SpinnerWrapperStyled = styled.div`
-    display: flex;
-    justify-content: center;
-    padding: 36px;
-`
-
 export const MainContainerStyled = styled.section`
     max-width: 1200px;
     margin: 32px auto;

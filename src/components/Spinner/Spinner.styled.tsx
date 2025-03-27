@@ -19,3 +19,9 @@ export const SpinnerStyled = styled.div`
         }
     }
 `
+
+export const SpinnerWrapperStyled = styled.div`
+    display: flex;
+    justify-content: center;
+    padding: 36px;
+`
