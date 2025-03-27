@@ -1,7 +1,7 @@
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router';
 
 import { Layout } from './components';
-import { Home } from './pages';
+import { Home, Detail } from './pages';
 
 const routes = [
     {
@@ -15,6 +15,10 @@ const routes = [
         {
           path: '/characters',
           element: <Home />,
+        },
+        {
+          path: '/characters/:id',
+          element: <Detail />,
         },
       ],
     },
