@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { ChangeEvent } from "react";
 
-import { useSearchCharacterQuery } from "../../services/characterHook";
+import { useSearchCharacterQuery } from "../../services/charactersHook";
 import { CharacterModel } from "../../models/Character";
 
 export const useCharacter = () => {

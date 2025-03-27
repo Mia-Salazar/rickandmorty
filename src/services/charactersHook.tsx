@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 
-import { fetchCharacters } from './character';
+import { fetchCharacters } from './characters';
 
 export const useSearchCharacterQuery = () => {
   const query = useQuery({
