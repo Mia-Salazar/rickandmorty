@@ -1,25 +1,50 @@
-# Welcome to Appspace React FE Challenge
+# Rick and Morty challenge
 
-You can use the Readme to document and explain your decisions.
+## Live
+The web is live [here]()
 
-### Explain here your decisions:
+## Comands
+To run the application:
+```console
+npm run start
+```
 
----
+To run tests:
+```console
+npm run test
+```
 
-....
+To generate a build:
+```console
+npm run build
+```
 
-## Available Scripts
+## API
+The API used is Rick and Morty. You can read [the documentation here](https://rickandmortyapi.com/)
 
-In the project directory, you can run:
+## Technologies
+- React: Library used for the whole application
+- Styled Components: For styling
+- Jest & testing-library: For testing
+- React Query: To cache responses
 
-### `npm start`
+## Architecture
+<pre>
+├───src
+|   app.tsx: file responsible for rendering pages
+|   GlobalStyles.tsx: global styles
+|   index.tsx: the root app
+│   ├───components: React components used in pages
+│   │   ├───Card
+│   │   ├───Filter
+│   │   ├───Header
+│   │   ├───Layout
+│   │   ├───Order
+│   │   └───Spinner
+│   ├───models: interfaces
+│   └───pages: Pages made with React used for the routes
+│       ├───Detail
+│       └───Home
+│   └───services: API calls
+</pre>
 
-### `npm test`
-
-### `npm run build`
-
----
-
-#### If you feel the need to extend the webpack config you can use this command.
-
-### `npm run eject`
