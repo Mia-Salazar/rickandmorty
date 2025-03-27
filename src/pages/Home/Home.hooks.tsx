@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { ChangeEvent } from "react";
 
 import { useSearchCharacterQuery } from "../../services/characterHook";
 import { CharacterModel } from "../../models/Character";
@@ -17,14 +18,22 @@ export const useCharacter = () => {
         });
     };
 
+
+    const handleChangeSort = (event: ChangeEvent<HTMLInputElement>) => {
+        const newSort = event.target.value as "asc" | "desc";
+        const sortedCharacters = sortCharactersByName(characters, newSort);
+        setCharacters(sortedCharacters);
+        setSortOrder(newSort);
+    };
+
     useEffect(() => {
         if (data?.results) {
             const sortedCharacters = sortCharactersByName(data.results, sortOrder)
             setCharacters(sortedCharacters);
         }
-      }, [data?.results]);
+    }, [data?.results, sortOrder]);
 
 
 
-    return {characters, isLoading}
+    return { characters, isLoading, handleChangeSort, sortOrder }
 }

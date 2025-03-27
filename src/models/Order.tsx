@@ -1,4 +1,6 @@
+import { ChangeEvent } from "react";
+
 export interface OrderModel {
-    sortOrder: "asc" | "desc"
-    handleSortChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    sortOrder: "asc" | "desc";
+    onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }

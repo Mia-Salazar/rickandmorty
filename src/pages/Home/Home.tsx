@@ -4,7 +4,7 @@ import { useCharacter } from "./Home.hooks";
 import { ContainerStyled, MainContainerStyled, SpinnerWrapperStyled } from "./Home.styled";
 
 const Home = () => {
-    const { characters, isLoading } = useCharacter();
+    const { characters, isLoading, handleChangeSort, sortOrder } = useCharacter();
 
     if (isLoading) 
         return (
@@ -16,7 +16,7 @@ const Home = () => {
     return (
         <MainContainerStyled>
             <div></div>
-            <Order sortOrder="asc" />
+            <Order sortOrder={sortOrder} onChange={handleChangeSort} />
             <ContainerStyled>
                 {(characters ?? []).map(({ id, name, image, location, species, origin, status }) => (
                     <Card

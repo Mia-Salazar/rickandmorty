@@ -1,7 +1,7 @@
 import { OrderModel } from "../../models/Order";
 import { ContainerStyled, InputStyled, CheckmarkStyled, SwitchContainerStyled, TitleStyled } from "./Order.styled";
 
-const Order: React.FC<OrderModel> = ({ sortOrder, handleSortChange }) => {
+const Order: React.FC<OrderModel> = ({ sortOrder, onChange }) => {
     return (
         <ContainerStyled>
             <TitleStyled>Order by name:</TitleStyled>
@@ -12,7 +12,7 @@ const Order: React.FC<OrderModel> = ({ sortOrder, handleSortChange }) => {
                     name="sortOrder"
                     value="asc"
                     checked={sortOrder === "asc"}
-                    onChange={handleSortChange}
+                    onChange={onChange}
                 />
                 Ascending
                 <CheckmarkStyled />
@@ -24,7 +24,7 @@ const Order: React.FC<OrderModel> = ({ sortOrder, handleSortChange }) => {
                     name="sortOrder"
                     value="desc"
                     checked={sortOrder === "desc"}
-                    onChange={handleSortChange}
+                    onChange={onChange}
                 />
                 Descending
                 <CheckmarkStyled />
