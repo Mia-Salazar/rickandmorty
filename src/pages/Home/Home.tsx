@@ -23,6 +23,7 @@ const Home = () => {
                     <ContainerStyled>
                         {(characters ?? []).map(({ id, name, image, location, species, origin, status }) => (
                             <Card
+                                id={id}
                                 key={id}
                                 name={name}
                                 image={image}

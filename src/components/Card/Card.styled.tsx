@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ImageModel } from "../../models/Image";
+import { Link } from "react-router";
 
 export const ContainerStyled = styled.li`
   display: flex;
@@ -36,4 +37,19 @@ export const NameStyled = styled.h3`
   color: #2DAA9E;
   font-size: 36px;
   font-family: "Jolly Lodger", system-ui;
+`
+
+export const LinkStyled = styled(Link)`
+  display: block;
+  width: fit-content;
+  margin-top: 44px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background: #2DAA9E;
+  color: #fff;
+  text-decoration: none;
+
+  &:hover {
+    background: #66D2CE;
+  }
 `

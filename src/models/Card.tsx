@@ -1,4 +1,5 @@
 export interface CardModel {
+    id: number;
     image: string;
     location:string;
     name: string;
