@@ -1,7 +1,16 @@
+import { ReactNode } from "react";
+
 export interface InputModel {
     type: string;
-    name: string;
+    id?: string;
+    name?: string;
     value: string;
-    checked: boolean;
+    checked?: boolean;
     onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    placeholder?: string;
+}
+
+export interface LabelModel {
+    htmlFor: string;
+    children: ReactNode;
 }
