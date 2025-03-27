@@ -1,21 +1,24 @@
 import { Card, Order, Spinner } from "../../components";
-import { useSearchCharacterQuery } from "../../services/characterHook";
+import { useCharacter } from "./Home.hooks";
 
 import { ContainerStyled, MainContainerStyled, SpinnerWrapperStyled } from "./Home.styled";
 
 const Home = () => {
-    const { data, isLoading } = useSearchCharacterQuery();
+    const { characters, isLoading } = useCharacter();
 
-    if (isLoading) return <SpinnerWrapperStyled><Spinner /></SpinnerWrapperStyled>
+    if (isLoading) 
+        return (
+            <SpinnerWrapperStyled>
+                <Spinner />
+            </SpinnerWrapperStyled>
+        );
 
-    return(
+    return (
         <MainContainerStyled>
-            <div>
-
-            </div>
+            <div></div>
             <Order sortOrder="asc" />
             <ContainerStyled>
-                {(data?.results ?? []).map(({ id, name, image, location, species, origin, status }) => (
+                {(characters ?? []).map(({ id, name, image, location, species, origin, status }) => (
                     <Card
                         key={id}
                         name={name}
@@ -29,6 +32,6 @@ const Home = () => {
             </ContainerStyled>
         </MainContainerStyled>
     );
-}
+};
 
 export default Home;
