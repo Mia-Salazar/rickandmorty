@@ -1,12 +1,14 @@
 import styled from "styled-components";
+
 import { InputModel, LabelModel } from "../../models/Input";
+import { FormModel } from "../../models/Form";
 
 export const InputContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
 `
 
-export const FormStyled = styled.form`
+export const FormStyled = styled.form<FormModel>`
   display: flex;
   align-items: flex-end;
 `

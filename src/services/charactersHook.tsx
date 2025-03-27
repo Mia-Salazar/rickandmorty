@@ -4,7 +4,7 @@ import { fetchCharacters } from './characters';
 
 export const useSearchCharacterQuery = (name: string) => {
   const query = useQuery({
-    queryKey: ['character'],
+    queryKey: ['character', name],
     queryFn: async () => {
       const data = await fetchCharacters(name);
 

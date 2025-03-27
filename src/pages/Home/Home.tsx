@@ -4,35 +4,37 @@ import { useCharacter } from "./Home.hooks";
 import { ContainerStyled, MainContainerStyled, SpinnerWrapperStyled, TitleContainerStyled, TitleStyled } from "./Home.styled";
 
 const Home = () => {
-    const { characters, isLoading, handleChangeSort, sortOrder } = useCharacter();
-
-    if (isLoading) 
-        return (
-            <SpinnerWrapperStyled>
-                <Spinner />
-            </SpinnerWrapperStyled>
-        );
+    const { characters, handleChangeSort, handleSubmit, isLoading, sortOrder } = useCharacter();
 
     return (
         <MainContainerStyled>
             <TitleContainerStyled>
                 <TitleStyled>Rick and Morty Characters</TitleStyled>
-                <Filter />
+                <Filter onSubmit={handleSubmit} />
             </TitleContainerStyled>
-            <Order sortOrder={sortOrder} onChange={handleChangeSort} />
-            <ContainerStyled>
-                {(characters ?? []).map(({ id, name, image, location, species, origin, status }) => (
-                    <Card
-                        key={id}
-                        name={name}
-                        image={image}
-                        location={location.name}
-                        species={species}
-                        origin={origin.name}
-                        status={status}
-                    />
-                ))}
-            </ContainerStyled>
+
+            {isLoading ? (
+                <SpinnerWrapperStyled>
+                    <Spinner />
+                </SpinnerWrapperStyled>
+            ):  (
+                <>
+                    <Order sortOrder={sortOrder} onChange={handleChangeSort} />
+                    <ContainerStyled>
+                        {(characters ?? []).map(({ id, name, image, location, species, origin, status }) => (
+                            <Card
+                                key={id}
+                                name={name}
+                                image={image}
+                                location={location.name}
+                                species={species}
+                                origin={origin.name}
+                                status={status}
+                            />
+                        ))}
+                    </ContainerStyled>
+                </>
+            )}
         </MainContainerStyled>
     );
 };

@@ -4,9 +4,9 @@ export interface InputModel {
     type: string;
     id?: string;
     name?: string;
-    value: string;
+    value?: string;
     checked?: boolean;
-    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
     placeholder?: string;
 }
 
