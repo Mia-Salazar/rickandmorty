@@ -1,7 +1,7 @@
 # Rick and Morty challenge
 
 ## Live
-The web is live [here]()
+The web is live [here](https://67e575a42d520b00a4a572e6--upbeat-jepsen-fe697b.netlify.app/)
 
 ## Comands
 To run the application:
