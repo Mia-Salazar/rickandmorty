@@ -48,3 +48,5 @@ The API used is Rick and Morty. You can read [the documentation here](https://ri
 │   └───services: API calls
 </pre>
 
+## To Do
+- Add tests
